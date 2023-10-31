@@ -1,0 +1,67 @@
+/* =======Підключення шрифтів вручну======= */
+@import url("fonts.css");
+
+/*=======Скидання стилів=======*/
+@import url("reset.css");
+
+
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+
+
+.card {
+	max-width: 386px;
+}
+.card__image img{
+	max-width: 100%;
+}
+.card__image {
+}
+
+/* social icons */
+.card__social {
+	display: inline-block;
+	font-size: 0;
+	margin-bottom: 105px;
+	margin-top: -269px;
+	text-align: center;
+}
+/* .social-item:not(:last-child) {
+	margin-left: 13px;
+} */
+.social-item {
+	display: inline-block;
+	font-size: 20px;
+}
+.social-item__link {
+	display: inline-block;
+
+}
+/* text */
+.card__body {
+	padding: 24px 69px 24px 69px;
+	border: 1px solid #000;
+	background-color: #fff;
+/* 	margin-top: -182px; */
+	margin-right: 22px;
+	margin-left: 22px;
+	position: relative;
+}
+.card__title {
+	color: #37393F;
+	text-align: center;
+	font-family: 'Poppins';
+	font-size: 25px;
+	font-weight: 600;
+	line-height: normal;
+}
+.card__text {
+	color: #7D7D7D;
+	text-align: center;
+	font-family: 'Inter';
+	font-size: 18px;
+	line-height: 135.187%;
+}
