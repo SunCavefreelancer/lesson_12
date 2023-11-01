@@ -4,20 +4,143 @@
 /*=======Скидання стилів=======*/
 @import url("reset.css");
 
-
+body {
+	background-color: rgb(138, 138, 138);
+}
 
 .wrapper {
 	overflow: clip;
 	min-height: 100%;
 }
 
+/* для усіх "__container" однаково */
+[class*="__container"] {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+/* ---header--- */
+.header {
+	background: linear-gradient(to top right, #ff00ff 0%, #66ffff 100%);
+	padding: 15px; 
+
+	/* фіксуємо "header" */
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	top: 0;
+	left: 0;
+}
+/* .menu {} */
+.menu__item {
+	display: inline-block;
+	position: relative; /* "sub-menu" позіціонуємо відносно 3-го пунку меню */
+}
+.menu__link {
+	background-color: #9966ff76;
+	box-shadow: 5px 5px 20px #7c1bf2bd;
+	padding: 10px 35px;
+	display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fbfefb;
+	text-shadow: 2px 0 0 #000;
+    font-family: 'Poppins', sans-serif;
+    line-height: 150%;	
+	margin-right: 25px;
+}
+.menu__link:hover {
+	background-color: rgba(3, 239, 247, 0.645);
+}
+
+
+/* відтворюємо відображення "sub-menu" */
+.menu__item:hover .sub-menu {
+	visibility: visible;
+}
+/* відтворюємо відображення "sub-menu" */
+
+.sub-menu__link--4:hover {
+	color: #7906bc;
+}
+/* ---sub-menu--- */
+.sub-menu {
+	position: absolute; /* "sub-menu" позіціонуємо відносно 3-го пунку меню "menu__item"*/
+	top: 100%;
+	left: 0;
+	padding-top: 5px; /* щоб не було преривань між пунктами меню і "sub-menu" */
+	color: #0c0c0d;
+	width: 200px; /* ширина "sub-menu" */
+	visibility: hidden; /* тепер ховаємо "sub-menu" і відображаємо його при наведенні на "menu__item" */
+}
+.sub-menu__item {	
+	background-color: rgba(122, 233, 174, 0.646);
+	box-shadow: 12px 12px 22px #fff;
+	padding: 10px 15px;
+}
+.sub-menu__link {
+	font-size: 20px;
+    font-weight: 700;
+    color: #fdfbfb;
+    font-family: 'Poppins', sans-serif;
+	display: inline-block;
+}
+.sub-menu__link:hover {
+	text-decoration-style: double;
+	text-decoration-line: underline;
+	text-decoration-color: rgb(181, 53, 245);
+}
+
+
+/*  */
+
+/* --- "floor-menu" --- */
+.floor-menu {	
+	position: absolute; /* "floor-menu" позіціонуємо відносно 3-го пунку меню "sub-menu__item"*/
+	top: 67%;
+	left: 80%;
+	padding: 15px 10px; /* щоб не було преривань між пунктами меню і "floor-menu" */
+	color: #37393F;
+	width: 250px; /* ширина "floor-menu" */
+	visibility: hidden; /* тепер ховаємо "floor-menu" і відображаємо його при наведенні на "sub-menu__item" */
+}
+.floor-menu__item {
+	background-color: rgba(21, 215, 254, 0.348);
+	box-shadow: 10px 10px 22px #fff;
+	padding: 10px 20px;
+}
+.floor-menu__link {
+	font-size: 20px;
+	color: rgb(5, 27, 112);
+	font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+	display: inline-block;
+}
+.floor-menu__link:hover {
+	color: rgb(245, 240, 247);
+	text-decoration: wave;
+	text-decoration-style: wavy;
+	text-decoration-line: underline;
+	text-decoration-color: rgb(2, 2, 149);
+}
+
+/* відтворюємо відображення "floor-menu" */
+.sub-menu__item:hover .floor-menu {
+	visibility: visible;
+}
+/* відтворюємо відображення "floor-menu" */
+
+/* ---header--- */
+
+/*  */
 
 /* block cards */
 .cards {
-	display: inline-block;
 	font-size: 0;
 	padding: 150px 0px;
-
 	max-width: 1220px;
 	margin: 0 auto;
 }
@@ -85,7 +208,7 @@
 
 /* text */
 .card__body {
-	padding: 24px 69px;
+	padding: 24px 45px;
 	background-color: #fff;
 	margin-right: 22px;
 	margin-left: 23px;
