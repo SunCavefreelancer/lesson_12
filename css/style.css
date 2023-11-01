@@ -12,8 +12,23 @@
 }
 
 
+/* block cards */
+.cards {
+	display: inline-block;
+	font-size: 0;
+	padding: 150px 0px;
+
+	max-width: 1220px;
+	margin: 0 auto;
+}
+
+
 /* card */
+.card:not(:last-child) {
+	margin-right: 31px;
+}
 .card {
+	display: inline-block;
 	max-width: 386px;
 	position: relative;
 }
@@ -34,15 +49,22 @@
 	opacity: 0.5;
 }
 
+/* row */
+.row:not(:last-child) {
+	margin-bottom: 31px
+}
+
+
 /* social icons */
 .card__social {
 	display: inline-block;
 	font-size: 0;
 
-	position: absolute;
-	top: 241px;
-	left: 88px;
+	position: absolute; /* відносно усієї картки */
+ 	top: 241px;
+	left: 88px; 
 }
+
 .social-item:not(:last-child) {
 	margin-left: 13px;
 }
@@ -50,17 +72,16 @@
 	display: inline-block;
 	font-size: 20px;
 }
-/* .social-item__link {
+.card__social { 			/* приховуємо елементи "icon" */
 	visibility: hidden;
 }
-.social-item__link:hover {
+.card:hover .card__social {	 /* при наведені на картку звертаємось до елементу "icon" та робимо видимим */
 	visibility: visible;
-} */
+}
 .social-item img {
-	width: 45px;
-	height: 45px;
 	max-width: 100%;
 }
+
 
 /* text */
 .card__body {
@@ -68,6 +89,7 @@
 	background-color: #fff;
 	margin-right: 22px;
 	margin-left: 23px;
+	width: 341px;
 
 	position: absolute;
 	bottom: 22px;
