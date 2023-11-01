@@ -5,7 +5,7 @@
 @import url("reset.css");
 
 body {
-	background-color: rgba(175, 122, 245, 0.602);
+	background-color: #0c0c0d;
 }
 
 .wrapper {
@@ -135,10 +135,185 @@ body {
 
 /*  */
 
+
+/* -----section ------------ */
+.section {
+	padding: 120px 0px 100px 0px;
+}
+
+/* ---sidebar--- */
+.sidebar__logo a {
+	color: #ff9736;
+	font-size: 50px;
+	text-transform: uppercase;	
+	font-weight: 900;
+	text-shadow: 2px 15px 20px #fbc480;
+}
+
+.sidebar::after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to right, black, 20%,rgb(236, 40, 138), black);
+	margin-top: 50px;
+
+}
+/* ---menu--- */
+.menu-sidebar {	
+	color: #fdfbfb;
+	max-width: 300px;
+}
+span {
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	margin-right: 10px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+}
+
+/* ---модіфікатори--- */
+.menu-sidebar__item--1 {
+	background-color: #202020;
+	margin-bottom: 15px;
+}
+.menu-sidebar__item--1:hover {
+	background-color: #f59a09;
+}
+
+.menu-sidebar__item--2 {
+	background-color: #202020;
+	margin-bottom: 15px;
+}
+.menu-sidebar__item--2:hover {
+	background-color: #f59a09;
+}
+
+.menu-sidebar__item--3 {
+	background-color: #202020;
+	margin-bottom: 15px;
+}
+.menu-sidebar__item--3:hover {
+	background-color: #f59a09;
+}
+
+.menu-sidebar__item--4 {
+	background-color: #202020;
+}
+.menu-sidebar__item--4:hover {
+	background-color: #f59a09;
+}
+/* ---модіфікатори--- */
+
+
+.menu-sidebar__link:not(:last-child) {
+	margin-bottom: 20px;		
+}
+.menu-sidebar__link {
+	font-size: 18px;
+    color: #fdfbfb;
+    font-family: 'Poppins', sans-serif;
+	display: inline-block;
+	padding: 15px 20px 20px 20px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------ */
+/* --====---efir-menu--====--- */
+.efir-menu {
+	position: absolute; /* "floor-menu" позіціонуємо відносно 3-го пунку меню "menu-sidebar__item"*/
+	top: 5%;
+	left: 100%;
+	padding: 15px 5px; /* щоб не було преривань між пунктами меню і "efir-menu" */
+	color: #7b99f4;
+	width: 250px; /* ширина "efir-menu" */
+	visibility: hidden; /* тепер ховаємо "efir-menu" і відображаємо його при наведенні на "menu-sidebar__item" */
+}
+.efir-menu__item {
+	background-color: #ff0561;
+}
+.efir-menu__link {
+	font-size: 18px;
+    color: #f8c2c2;
+    font-family: 'Inter', sans-serif;
+	display: inline-block;
+	padding: 10px;
+}
+.efir-menu__link:hover {
+	text-decoration: underline;
+	color: #ff8121;
+}
+/* ---===--efir-menu---===--- */
+
+/* ---===--позіціонуємо вкладене меню "ЕФІР"---===-- */
+.menu-sidebar__item {
+	position: relative;		
+}
+/* ---===--позіціонуємо вкладене меню "ЕФІР"---===-- */
+
+
+/* ---===--відтворюємо відображення "ЕФІР"---===-- */
+.menu-sidebar__item:hover .efir-menu {
+	visibility: visible;
+}
+/* ---===--відтворюємо відображення "ЕФІР"---===-- */
+
+
+/* -------------------------------------------------------------------------- */
+/* ---jazz-menu---- */
+.jazz-menu 	{
+	position: absolute; /* "jazz-menu" позіціонуємо відносно 3-го пунку меню "efir-menu__item "*/
+	top: 0;
+	left: 100%;
+	padding: 5px 5px; /* щоб не було преривань між пунктами меню і "jazz-menu" */
+	color: #7b99f4;
+	width: 250px; /* ширина "jazz-menu" */
+	visibility: hidden; /* тепер ховаємо "jazz-menu" і відображаємо його при наведенні на "efir-menu__item " */
+}
+.jazz-menu__item {
+	background-color: #7d6ba0;
+}
+.jazz-menu__link {
+	font-size: 18px;
+    color: #f8c2c2;
+    font-family: 'Inter', sans-serif;
+	display: inline-block;
+	padding: 10px;
+}
+.jazz-menu__link:hover {
+	text-decoration: underline;
+	color: #ff8121;
+}
+
+
+/* ---===--позіціонуємо вкладене меню "ЕФІР"---===-- */
+.efir-menu__item {
+	position: relative;		
+}
+/* ---===--позіціонуємо вкладене меню "ЕФІР"---===-- */
+
+
+/* ---===--відтворюємо відображення "ЕФІР"---===-- */
+.efir-menu:hover .jazz-menu {
+	visibility: visible;
+}
+/* ---===--відтворюємо відображення "ЕФІР"---===-- */
+
+/* ---jazz-menu---- */
+
+/* ------------------------------------------------------------------------------------------- */
+
+
+
+
+/* -------------------------------------------------------------------------------------------- */
 /* block cards */
 .cards {
 	font-size: 0;
-	padding: 150px 0px;
+	padding: 100px 0px;
 	max-width: 1220px;
 	margin: 0 auto;
 }
