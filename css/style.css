@@ -227,19 +227,22 @@ span {
 	position: absolute; /* "floor-menu" позіціонуємо відносно 3-го пунку меню "menu-sidebar__item"*/
 	top: 5%;
 	left: 100%;
-	padding: 15px 5px; /* щоб не було преривань між пунктами меню і "efir-menu" */
+	background-color: rgba(255, 5, 97, 0.15);
+	padding: 10px 5px; /* щоб не було преривань між пунктами меню і "efir-menu" */
 	color: #7b99f4;
 	width: 250px; /* ширина "efir-menu" */
 	visibility: hidden; /* тепер ховаємо "efir-menu" і відображаємо його при наведенні на "menu-sidebar__item" */
 }
 .efir-menu__item {
-	background-color: #ff0561;
+	background-color: #ff0571;
+	margin-bottom: 5px;
 }
 .efir-menu__link {
 	font-size: 18px;
     color: #f8c2c2;
+	font-weight: 700;
     font-family: 'Inter', sans-serif;
-	display: inline-block;
+	display: block;
 	padding: 10px;
 }
 .efir-menu__link:hover {
@@ -305,6 +308,15 @@ span {
 /* ---jazz-menu---- */
 
 /* ------------------------------------------------------------------------------------------- */
+
+
+.info{
+	position: fixed;
+	top: 80px;
+	right: 110px;
+	z-index: 2;
+}
+
 
 
 
@@ -386,6 +398,7 @@ span {
 	margin-right: 22px;
 	margin-left: 23px;
 	width: 341px;
+/* 	width: 88%; */
 
 	position: absolute;
 	bottom: 22px;
