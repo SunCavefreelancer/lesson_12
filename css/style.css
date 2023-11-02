@@ -35,7 +35,7 @@ body {
 /* .menu {} */
 .menu__item {
 	display: inline-block;
-	position: relative; /* "sub-menu" позіціонуємо відносно 3-го пунку меню */
+	position: relative; /* "sub-menu" позіціонування 3-го пунку меню */
 }
 .menu__link {
 	background-color: #9966ff76;
@@ -49,6 +49,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 150%;	
 	margin-right: 25px;
+	margin-bottom: 5px;
 }
 .menu__link:hover {
 	background-color: rgba(3, 239, 247, 0.645);
@@ -309,10 +310,9 @@ span {
 
 /* ------------------------------------------------------------------------------------------- */
 
-
 .info{
 	position: fixed;
-	top: 80px;
+	top: 130px;
 	right: 110px;
 	z-index: 2;
 }
