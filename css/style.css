@@ -410,7 +410,7 @@ span {
 	font-family: 'Poppins';
 	font-size: 25px;
 	font-weight: 600;
-	line-height: normal;
+	line-height: 1.52;
 }
 .card__text {
 	color: #7D7D7D;
